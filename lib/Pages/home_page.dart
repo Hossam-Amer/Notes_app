@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color.fromRGBO(45, 45, 45, 1),
+          // backgroundColor: const Color.fromRGBO(45, 45, 45, 1),
           title: null,
           actions: [],
           flexibleSpace: Align(
