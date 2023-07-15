@@ -56,8 +56,11 @@ class _HomePageState extends State<HomePage> {
               )),
         ),
         body: Container(
-          width: MediaQuery.of(context).size.width,color: const Color.fromRGBO(56, 56, 56, 0.9),
-          child: Column(children: [],),
+          width: MediaQuery.of(context).size.width,
+          color: const Color.fromRGBO(56, 56, 56, 0.9),
+          child: Column(
+            children: [],
+          ),
         ));
   }
 }
