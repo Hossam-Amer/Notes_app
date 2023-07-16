@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notesapp/widgets/custom_text_field.dart';
 
 class AddNoteSheet extends StatelessWidget {
   const AddNoteSheet({super.key});
@@ -16,20 +17,12 @@ class AddNoteSheet extends StatelessWidget {
             const SizedBox(
               height: 15,
             ),
-            const TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'Title',
-              ),
-            ),
+            const CustomTextField(text: "Title"),
             const SizedBox(
               height: 30,
             ),
-            const TextField(
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                hintText: 'content',
-              ),
+            const CustomTextField(
+              text: "Content",
               maxLines: 5,
             ),
             const SizedBox(
@@ -39,8 +32,9 @@ class AddNoteSheet extends StatelessWidget {
               child: GestureDetector(
                 child: Container(
                   decoration: BoxDecoration(
-                      color: const Color.fromRGBO(98, 253, 214, 1),
-                      borderRadius: BorderRadius.circular(15)),
+                    color: const Color.fromRGBO(98, 253, 214, 1),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
                   width: MediaQuery.of(context).size.width,
                   height: 70,
                   child: const Center(

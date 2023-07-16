@@ -16,54 +16,18 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            showModalBottomSheet(context: context, builder: (context){
-              return AddNoteSheet() ;
-            });
-          },
-          child: const Icon(
-            Icons.add
-          ,grade: 100,),),
-      appBar: AppBar(
-        backgroundColor: const Color.fromRGBO(45, 45, 45, 1),
-        flexibleSpace: Align(
-            alignment: Alignment.bottomLeft,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.only(left: 12),
-                  child: Text(
-                    "Notes",
-                    style: TextStyle(color: Colors.white, fontSize: 17),
-                  ),
-                ),
-                GestureDetector(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromRGBO(56, 56, 56, 1),
-                    ),
-                    height: 50,
-                    width: 50,
-                    margin: const EdgeInsets.only(
-                      top: 8,
-                      bottom: 8,
-                      right: 8,
-                    ),
-                    child: const Icon(
-                      Icons.search,
-                      size: 30,
-                      color: Colors.white,
-                    ),
-                  ),
-                  onTap: () {
-                    print("asdasdsf");
-                    
-                  },
-                ),
-              ],
-            )),
+        onPressed: () {
+          showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return const AddNoteSheet();
+            },
+          );
+        },
+        child: const Icon(
+          Icons.add,
+          grade: 100,
+        ),
       ),
       body: const HomePageBody(),
     );
