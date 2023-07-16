@@ -16,16 +16,14 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-          backgroundColor: const Color.fromARGB(255, 62, 62, 62),
           onPressed: () {
             showModalBottomSheet(context: context, builder: (context){
               return AddNoteSheet() ;
             });
           },
-          child: Icon(
-            Icons.add,
-            color: Colors.white.withOpacity(0.9),
-          )),
+          child: const Icon(
+            Icons.add
+          ,grade: 100,),),
       appBar: AppBar(
         backgroundColor: const Color.fromRGBO(45, 45, 45, 1),
         flexibleSpace: Align(
@@ -61,6 +59,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   onTap: () {
                     print("asdasdsf");
+                    
                   },
                 ),
               ],
