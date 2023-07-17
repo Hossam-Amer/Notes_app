@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          showModalBottomSheet(
+        showModalBottomSheet(
             context: context,
             builder: (context) {
               return const AddNoteSheet();
